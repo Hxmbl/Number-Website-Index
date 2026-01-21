@@ -31,7 +31,7 @@ def save_to_csv(domain, port):
             writer.writerow([domain, port, "Online", datetime.now().strftime("%Y-%m-%d %H:%M:%S")])
 
 @app.command()
-def scan(limit: int = 1000):
+def scan(limit: int = 1000000):
     """Scans domains from 0.com up to the limit and saves to CSV."""
     
     with Progress(
